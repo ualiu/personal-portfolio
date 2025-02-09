@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/main.css" />
     <title>Urim Aliu - Marketing Leader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Optional Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +12,11 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
   </head>
+
   <body>
     <div class="container">
       <!-- LEFT COLUMN -->
@@ -20,7 +24,9 @@
         <!-- HERO -->
         <section class="hero">
           <h1>Urim Aliu</h1>
-          <p>Marketing Leader, Problem Solver & Always Learning</p>
+          <p class="subtitle">
+            Marketing Leader, Problem Solver & Always Learning
+          </p>
 
           <!-- Vidyard video -->
           <div class="video-container">
@@ -33,22 +39,20 @@
               style="width: 100%; display: block"
             />
           </div>
-          <!-- Vidyard Script -->
           <script async src="https://play.vidyard.com/embed/v4.js"></script>
 
           <div class="hero-buttons">
-            <a href="assets/Urim Aliu Resume 2025 (2).pdf" class="btn"
-              >Download Full Resume</a
-            >
+            <a href="assets/Urim Aliu Resume 2025 (2).pdf" class="btn">
+              Download Full Resume
+            </a>
             <a href="mailto:urim.aliu@gmail.com" class="btn">Contact Me</a>
           </div>
         </section>
+        <!-- END HERO -->
 
         <!-- SEARCH CARD -->
-        <section class="search-section">
-          <h2 class="section-title" style="margin-top: 0">
-            Search My Experience
-          </h2>
+        <section class="search-section" id="searchSection">
+          <h2 class="section-title" style="margin-top: 0">Search the page</h2>
           <div class="search-bar">
             <label for="searchInput">Keyword:</label>
             <input
@@ -59,9 +63,10 @@
             <button type="button" onclick="searchExperience()">Search</button>
           </div>
         </section>
+        <!-- END SEARCH -->
 
-        <!-- COLLAPSIBLE: EXPERIENCE -->
-        <div class="collapsible-section" id="experienceSection">
+        <!-- EXPERIENCE (Collapsible) -->
+        <section class="experience collapsible-section" id="experienceSection">
           <div
             class="collapsible-header"
             onclick="toggleCollapsible('experienceSection')"
@@ -70,6 +75,7 @@
             <span class="collapse-toggle" id="experienceSectionToggle">+</span>
           </div>
           <div class="collapsible-content">
+            <!-- Alchemy -->
             <div class="job">
               <h3>
                 Senior Marketing Manager at
@@ -86,6 +92,7 @@
               </p>
             </div>
 
+            <!-- GeoMate -->
             <div class="job">
               <h3>
                 Digital Marketing Manager at
@@ -99,6 +106,7 @@
               </p>
             </div>
 
+            <!-- Planitar -->
             <div class="job">
               <h3>
                 Growth Marketer Lead at
@@ -112,10 +120,11 @@
               </p>
             </div>
           </div>
-        </div>
+        </section>
+        <!-- END EXPERIENCE -->
 
-        <!-- COLLAPSIBLE: PERSONAL PROJECTS -->
-        <div class="collapsible-section" id="projectsSection">
+        <!-- PROJECTS (Collapsible) -->
+        <section class="projects collapsible-section" id="projectsSection">
           <div
             class="collapsible-header"
             onclick="toggleCollapsible('projectsSection')"
@@ -124,6 +133,7 @@
             <span class="collapse-toggle" id="projectsSectionToggle">+</span>
           </div>
           <div class="collapsible-content">
+            <!-- Communihub -->
             <div class="project">
               <h3>
                 Founder at
@@ -136,6 +146,7 @@
                 their communities in one integrated system.
               </p>
             </div>
+            <!-- Kwkly -->
             <div class="project">
               <h3>
                 Founder at
@@ -148,10 +159,11 @@
               </p>
             </div>
           </div>
-        </div>
+        </section>
+        <!-- END PROJECTS -->
 
-        <!-- COLLAPSIBLE: PAST WORK -->
-        <div class="collapsible-section" id="pastWorkSection">
+        <!-- PAST WORK (Collapsible) -->
+        <section class="past-work collapsible-section" id="pastWorkSection">
           <div
             class="collapsible-header"
             onclick="toggleCollapsible('pastWorkSection')"
@@ -184,10 +196,11 @@
               </p>
             </div>
           </div>
-        </div>
+        </section>
+        <!-- END PAST WORK -->
 
-        <!-- COLLAPSIBLE: VOLUNTEER -->
-        <div class="collapsible-section" id="volunteerSection">
+        <!-- VOLUNTEER (Collapsible) -->
+        <section class="volunteer collapsible-section" id="volunteerSection">
           <div
             class="collapsible-header"
             onclick="toggleCollapsible('volunteerSection')"
@@ -204,10 +217,11 @@
               bring ideas to life.
             </p>
           </div>
-        </div>
+        </section>
+        <!-- END VOLUNTEER -->
 
-        <!-- COLLAPSIBLE: Books -->
-        <div class="collapsible-section" id="booksSection">
+        <!-- BOOKS (Collapsible) -->
+        <section class="books collapsible-section" id="booksSection">
           <div
             class="collapsible-header"
             onclick="toggleCollapsible('booksSection')"
@@ -223,10 +237,7 @@
                 <h3>The Fourth Turning by William Strauss and Neil Howe</h3>
               </li>
               <li>
-                <h3>
-                  AI Super-Powers: China, Silicon Valley, and the New World
-                  Order by Kai-Fu Lee
-                </h3>
+                <h3>AI Super-Powers by Kai-Fu Lee</h3>
               </li>
               <li><h3>Zero to One by Peter Thiel</h3></li>
               <li><h3>Sapiens by Yuval Noah Harari</h3></li>
@@ -236,16 +247,16 @@
               <li><h3>Thinking Fast &amp; Slow by Daniel Kahneman</h3></li>
             </ul>
           </div>
-        </div>
+        </section>
+        <!-- END BOOKS -->
       </div>
       <!-- END LEFT COLUMN -->
 
-      <!-- RIGHT COLUMN (SIDEBAR) -->
+      <!-- RIGHT COLUMN (Contact & Skills) -->
       <aside class="right-column">
-        <h3>Connect with me</h3>
+        <h2 class="section-title" style="margin-top: 0">Connect with me</h2>
         <!-- CONTACT INFO -->
         <section>
-          <h4>Contact Information</h4>
           <p><strong>Phone:</strong> 519.589.2548</p>
           <p>
             <strong>Email:</strong>
@@ -263,9 +274,9 @@
           </p>
         </section>
 
-        <!-- SKILLS AS BADGES -->
+        <!-- SKILLS as badges -->
         <section>
-          <h4>Skills</h4>
+          <h3>Skills</h3>
           <ul class="skill-list">
             <li class="badge">Marketing Leadership</li>
             <li class="badge">Strategic Planning</li>
@@ -280,18 +291,27 @@
 
         <!-- TOOLS -->
         <section>
-          <h4>Tools</h4>
-          <p>
-            Hubspot, GA4, GConsole, Looker Studio, SEMRush, Adobe Suite,
-            Wordpress, Webflow, OpenAI API, Notion, Jira, MS Office
-          </p>
+          <h3>Tools</h3>
+          <ul class="skill-list">
+            <li class="badge">Hubspot</li>
+            <li class="badge">GA4</li>
+            <li class="badge">Google Search Console</li>
+            <li class="badge">Looker Studio</li>
+            <li class="badge">SEMRush</li>
+            <li class="badge">Adobe Suite</li>
+            <li class="badge">Wordpress</li>
+            <li class="badge">Webflow</li>
+            <li class="badge">Notion</li>
+            <li class="badge">Jira</li>
+            <li class="badge">MS Office</li>
+          </ul>
         </section>
 
         <!-- EDUCATION -->
         <section>
-          <h4>Education</h4>
+          <h3>Education</h3>
           <p>
-            Conestoga College (2012 - 2015) <br />
+            Conestoga College (2012 - 2015)<br />
             Major in Marketing
           </p>
         </section>
@@ -304,9 +324,9 @@
       <p>&copy; 2025 Urim Aliu</p>
     </footer>
 
-    <!-- JS: Search + Collapsible Logic -->
+    <!-- JS: Search + Collapsible -->
     <script>
-      // SEARCH EXPERIENCE (Filters .job items in #experienceSection)
+      /* SEARCH EXPERIENCE */
       function searchExperience() {
         const query = document
           .getElementById("searchInput")
@@ -325,17 +345,14 @@
         });
       }
 
-      // TOGGLE COLLAPSIBLE SECTIONS
+      /* TOGGLE COLLAPSIBLE */
       function toggleCollapsible(sectionId) {
         const section = document.getElementById(sectionId);
         if (!section) return;
 
         section.classList.toggle("open");
-
-        // Update the toggle symbol (+ or −)
         const toggleIcon = document.getElementById(sectionId + "Toggle");
         if (!toggleIcon) return;
-
         toggleIcon.textContent = section.classList.contains("open") ? "–" : "+";
       }
     </script>

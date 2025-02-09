@@ -16,7 +16,7 @@ body {
 /* CONTAINER: Two-column layout with responsive wrap */
 .container {
   display: flex;
-  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+  flex-wrap: wrap; /* So columns can stack on small screens */
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
@@ -26,39 +26,73 @@ body {
 /* LEFT COLUMN (Main Content) */
 .left-column {
   flex: 2; /* bigger portion of the space */
-  /* Removed min-width to allow smaller screens */
 }
 
-/* RIGHT COLUMN (Sidebar) */
+/* RIGHT COLUMN (Sidebar/Contact) */
 .right-column {
   flex: 1;
-  /* Removed min-width to allow smaller screens */
   background-color: #fff;
   border-radius: 8px;
   padding: 1.5rem;
   height: fit-content;
-  align-self: flex-start; /* Sticks to top */
+  align-self: flex-start; /* Sticks to top if left column is taller */
 }
 
-/* MEDIA QUERY: stack columns on screens <= 768px */
+/* MEDIA QUERY: Reorder on mobile so the Contact card is after Search but before Experience. */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    padding: 1rem; /* Less padding on small screens */
+    padding: 1rem;
   }
-  .left-column,
-  .right-column {
+
+  /* Left column holds Hero, Search, Experience, etc. by default
+     but we want the order: 
+       1) Hero
+       2) Search
+       3) Right column (Contact)
+       4) Experience
+       5) Projects
+       6) Past Work
+       7) Volunteer
+       8) Books
+  */
+  .left-column {
+    order: 1; /* Hero at top, then search, experience etc. as normal flow. */
     width: 100%;
-    margin: 0; /* Ensure no leftover margin/gap */
   }
+
+  .search-section {
+    order: 2; /* below hero */
+  }
+
   .right-column {
-    margin-top: 1rem; /* Put a little space above sidebar */
+    order: 3; /* Contact card after search, but before experience. */
+    width: 100%;
+    margin: 0;
+  }
+
+  .experience {
+    order: 4;
+    width: 100%;
+  }
+
+  .projects {
+    order: 5;
+  }
+  .past-work {
+    order: 6;
+  }
+  .volunteer {
+    order: 7;
+  }
+  .books {
+    order: 8;
   }
 }
 
 /* HERO */
 .hero {
-  background: #ffffff;
+  background: #fff;
   border-radius: 8px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -67,21 +101,23 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 2.2rem;
   color: #222;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
-.hero p {
-  margin-bottom: 1rem;
+.subtitle {
+  margin-bottom: 1.5rem;
   color: #555;
+}
+.video-container {
+  margin-bottom: 1rem;
 }
 .hero-buttons {
   display: flex;
-  flex-wrap: wrap; /* So buttons can wrap on smaller screens */
   gap: 1rem;
+  flex-wrap: wrap;
   margin-top: 1rem;
 }
 .btn {
-  display: inline-block;
-  background: #0072b1; /* Primary color */
+  background: #0072b1;
   color: #fff;
   text-decoration: none;
   padding: 0.75rem 1.5rem;
@@ -93,13 +129,7 @@ body {
   background: #00548c;
 }
 
-/* SEARCH CARD */
-.search-section {
-  background: #fff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-}
+/* SECTION TITLES */
 .section-title {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
@@ -108,9 +138,17 @@ body {
   border-left: 4px solid #0072b1;
   padding-left: 0.5rem;
 }
+
+/* SEARCH CARD */
+.search-section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
 .search-bar {
   display: flex;
-  flex-wrap: wrap; /* So label & input can wrap on small screens */
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem;
   margin-top: 1rem;
@@ -119,7 +157,7 @@ body {
   font-weight: 600;
 }
 .search-bar input {
-  flex: 1; /* Expand input on small screens */
+  flex: 1;
   padding: 0.5rem;
   border-radius: 4px;
   border: 1px solid #ccc;
@@ -130,8 +168,8 @@ body {
   border: none;
   padding: 0.55rem 1rem;
   border-radius: 4px;
-  cursor: pointer;
   font-weight: 600;
+  cursor: pointer;
 }
 .search-bar button:hover {
   background-color: #00548c;
@@ -142,7 +180,7 @@ body {
   background: #fff;
   border-radius: 8px;
   margin-bottom: 2rem;
-  overflow: hidden; /* Hide content when collapsed */
+  overflow: hidden; /* hide content when collapsed */
 }
 .collapsible-header {
   display: flex;
@@ -165,56 +203,38 @@ body {
 }
 .collapsible-content {
   padding: 0 1.5rem 1.5rem;
-  display: none; /* Hidden by default */
+  display: none; /* hidden by default */
 }
 .collapsible-section.open .collapsible-content {
   display: block;
 }
 
-/* EXPERIENCE (job items) */
-.job {
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
-}
-.job:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-.job h3 {
-  font-size: 1.2rem;
-  color: #222;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-.job h4 {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 0.75rem;
-  font-weight: 600;
-}
-.job ul {
-  list-style: disc;
-  margin-left: 1.5rem;
-}
-
-/* PROJECTS, PAST WORK, VOLUNTEER */
+/* EXPERIENCE, PROJECTS, etc. items */
+.job,
 .project {
   margin-bottom: 1rem;
-  border-bottom: 1px solid #eee;
   padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
 }
+.job:last-child,
 .project:last-child {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
+.job h3,
 .project h3 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #222;
   margin-bottom: 0.5rem;
   font-weight: bold;
+}
+.job h4,
+.project h4 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
 }
 
 /* SIDEBAR Headings */
@@ -234,16 +254,18 @@ body {
   font-weight: 600;
 }
 
-/* SKILL BADGES */
+/* SKILLS (Badges) */
 .skill-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   list-style: none;
   margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
 }
 .badge {
-  display: inline-block;
   background-color: #0072b1;
   color: #fff;
   border-radius: 12px;
@@ -258,9 +280,4 @@ footer {
   padding: 1rem 0;
   color: #666;
   font-size: 0.9rem;
-}
-
-/* VIDEO Container */
-.video-container {
-  margin-bottom: 1rem;
 }
