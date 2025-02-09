@@ -1,363 +1,382 @@
-<!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Urim Aliu Personal Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Urim Aliu - Marketing Leader</title>
+    <!-- Optional Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- LEFT COLUMN -->
+      <div class="left-column">
+        <!-- HERO -->
+        <section class="hero">
+          <h1>Urim Aliu</h1>
+          <p>Marketing Leader, Problem Solver & Always Learning</p>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+          <!-- Vidyard video -->
+          <div class="video-container">
+            <img
+              class="vidyard-player-embed"
+              src="https://play.vidyard.com/KDrojZ6gNzT8B7rndXoiAn.jpg"
+              data-uuid="KDrojZ6gNzT8B7rndXoiAn"
+              data-v="4"
+              data-type="inline"
+              style="width: 100%; display: block"
+            />
+          </div>
+          <!-- Vidyard Script -->
+          <script async src="https://play.vidyard.com/embed/v4.js"></script>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+          <div class="hero-buttons">
+            <a href="assets/Urim Aliu Resume 2025 (2).pdf" class="btn"
+              >Download Full Resume</a
+            >
+            <a href="mailto:urim.aliu@gmail.com" class="btn">Contact Me</a>
+          </div>
+        </section>
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>Test → Measure → Learn → Iterate</strong></a>
-									<ul class="icons">
-										<li><a href="https://www.linkedin.com/in/urim-aliu-6262aaba/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-										<li><a href="https://github.com/ualiu" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="https://www.instagram.com/urimaaliu/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									</ul>
-								</header>
+        <!-- SEARCH CARD -->
+        <section class="search-section">
+          <h2 class="section-title" style="margin-top: 0">
+            Search My Experience
+          </h2>
+          <div class="search-bar">
+            <label for="searchInput">Keyword:</label>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Type a keyword..."
+            />
+            <button type="button" onclick="searchExperience()">Search</button>
+          </div>
+        </section>
 
-<!-- Banner -->
-<section id="banner">
-	<div class="content">
-		<header style="margin-bottom: 5px; padding-bottom: 0;">
-			<h1 style="margin-bottom: 5px;">Growth Focused Marketing Leader and Team Builder</h1>
-			<p>Please watch this quick intro video below</p>
-	</header>
-	
+        <!-- COLLAPSIBLE: EXPERIENCE -->
+        <div class="collapsible-section" id="experienceSection">
+          <div
+            class="collapsible-header"
+            onclick="toggleCollapsible('experienceSection')"
+          >
+            <h2>Current &amp; Most Recent Experience</h2>
+            <span class="collapse-toggle" id="experienceSectionToggle">+</span>
+          </div>
+          <div class="collapsible-content">
+            <div class="job">
+              <h3>
+                Senior Marketing Manager at
+                <a href="https://getexoshield.com">Alchemy</a>
+              </h3>
+              <h4>Kitchener, ON | June 2024 — Present</h4>
+              <p>
+                Reporting directly to the CEO, at Alchemy I manage a six-figure
+                marketing budget while leading a team of three in-house
+                marketers and two external agencies to grow both D2C and B2B
+                channels. My mission here is to rebuild Alchemy’s digital
+                marketing system to create scalable, automated processes that
+                support Alchemy's growth goals.
+              </p>
+              <!-- <h4>Key Achievements</h4>
+              <ul>
+                <li>
+                  Developed the 2025 marketing budget, increasing spending by
+                  30%.
+                </li>
+                <li>
+                  Implemented a new SEO and content strategy, boosting inbound
+                  MQLs from 30 to 50/month.
+                </li>
+                <li>
+                  Built a full-funnel paid media strategy driving a 15% increase
+                  in D2C sales.
+                </li>
+                <li>
+                  Developing HubSpot marketing infrastructure from the ground
+                  up.
+                </li>
+              </ul> -->
+              <!-- <h4>Daily Tasks</h4>
+              <ul>
+                <li>
+                  Collaborate with Leadership, Sales, Product, and R&amp;D for
+                  annual/quarterly plans.
+                </li>
+                <li>
+                  Manage a team of marketers and oversee project planning.
+                </li>
+                <li>
+                  Oversee SEO, SEM, email marketing, UX/UI, and digital ads.
+                </li>
+                <li>
+                  Track team KPIs via weekly check-ins and performance
+                  dashboards.
+                </li>
+              </ul> -->
+            </div>
 
-			<!-- Responsive Video Embed (Vidyard) -->
-			<div class="video-container">
-					<img 
-					class="vidyard-player-embed"
-					src="https://play.vidyard.com/KDrojZ6gNzT8B7rndXoiAn.jpg"
-					data-uuid="KDrojZ6gNzT8B7rndXoiAn"
-					data-v="4"
-					data-type="inline"
-					style="width: 100%; display: block;"
-					/>
-			</div>
+            <div class="job">
+              <h3>
+                Digital Marketing Manager at
+                <a href="https://geomate.ca">Geomate</a>
+              </h3>
+              <h4>Kitchener, ON | Sept 2023 — June 2024</h4>
+              <p>
+                Built and executed GeoMate’s go-to-market strategy to grow
+                inbound/outbound leads for Public sector and Autonomous Driving
+                verticals.
+              </p>
+              <!-- <ul>
+                <li>
+                  Launched new lead gen campaigns (digital &amp; offline),
+                  improving conversions.
+                </li>
+                <li>
+                  Managed a team of 3 (copy, creative), providing direction and
+                  collaboration.
+                </li>
+                <li>
+                  Continuously optimized the website for SEO, improving search
+                  rankings.
+                </li>
+                <li>
+                  Implemented reporting via Google Analytics, GSC, Looker
+                  Studio, HubSpot.
+                </li>
+              </ul> -->
+            </div>
 
-			<ul class="actions">
-					<li><a href="assets/Urim Aliu Resume 2025 (2).pdf" class="button big">Download my Resume</a></li>
-			</ul>
-	</div>
-</section>
+            <div class="job">
+              <h3>
+                Growth Marketer Lead at
+                <a href="https://goiguide.com">Planitar</a>
+              </h3>
+              <h4>Waterloo, ON | Jan 2022 — Sept 2023</h4>
+              <p>
+                Oversaw multichannel digital campaigns, collaborated with
+                agencies, and analyzed performance metrics to optimize lead
+                generation and increase pipeline velocity.
+              </p>
+              <!-- <h4>Daily Tasks</h4>
+              <ul>
+                <li>
+                  Developed marketing tactics aligned with business goals.
+                </li>
+                <li>
+                  Managed campaigns across email, social, search, display
+                  advertising.
+                </li>
+                <li>
+                  Coordinated with agency partners on creative, targeting, and
+                  execution.
+                </li>
+                <li>
+                  Measured inbound leads and ROI improvements through analytics.
+                </li>
+              </ul> -->
+            </div>
+          </div>
+        </div>
 
-<!-- Vidyard Script (Required for Functionality) -->
-<script async src="https://play.vidyard.com/embed/v4.js"></script>
+        <!-- COLLAPSIBLE: PERSONAL PROJECTS -->
+        <div class="collapsible-section" id="projectsSection">
+          <div
+            class="collapsible-header"
+            onclick="toggleCollapsible('projectsSection')"
+          >
+            <h2>Personal Projects</h2>
+            <span class="collapse-toggle" id="projectsSectionToggle">+</span>
+          </div>
+          <div class="collapsible-content">
+            <div class="project">
+              <h3>
+                Founder at
+                <a href="https://communihub.io">Communihub</a>
+              </h3>
+              <p>
+                (Feb 2023 — Present)<br />
+                Leading the development of a full-stack SaaS platform for
+                Business Incubators &amp; Membership Organizations to manage
+                their communities in one integrated system.
+              </p>
+            </div>
+            <div class="project">
+              <h3>
+                Founder at
+                <a href="https://kwkly.ca">Kwkly</a>
+              </h3>
+              <p>
+                (June 2020 — Dec 2021)<br />
+                Built and launched a scalable ecommerce app for ultra-fast
+                grocery and essentials delivery.
+              </p>
+            </div>
+          </div>
+        </div>
 
+        <!-- COLLAPSIBLE: PAST WORK -->
+        <div class="collapsible-section" id="pastWorkSection">
+          <div
+            class="collapsible-header"
+            onclick="toggleCollapsible('pastWorkSection')"
+          >
+            <h2>Past Work Experience</h2>
+            <span class="collapse-toggle" id="pastWorkSectionToggle">+</span>
+          </div>
+          <div class="collapsible-content">
+            <div class="job">
+              <h3>
+                Product Manager at
+                <a href="https://wurth.ca">Wurth Canada</a>
+              </h3>
+              <h4>Guelph, ON | Oct 2019 — June 2020</h4>
+              <p>
+                Introduced new products to market and enhanced existing lines,
+                leveraging market trends for improved positioning.
+              </p>
+            </div>
+            <div class="job">
+              <h3>
+                Product Category Manager at
+                <a href="https://fastenal.ca">Fastenal</a>
+              </h3>
+              <h4>Kitchener, ON | May 2015 — Sept 2019</h4>
+              <p>
+                Managed multiple product lines, supplier relationships, and
+                oversaw domestic &amp; international product flow for strategic
+                categories.
+              </p>
+            </div>
+          </div>
+        </div>
 
+        <!-- COLLAPSIBLE: VOLUNTEER -->
+        <div class="collapsible-section" id="volunteerSection">
+          <div
+            class="collapsible-header"
+            onclick="toggleCollapsible('volunteerSection')"
+          >
+            <h2>Volunteer Work</h2>
+            <span class="collapse-toggle" id="volunteerSectionToggle">+</span>
+          </div>
+          <div class="collapsible-content">
+            <h3>Subject Matter Expert at Conestoga College</h3>
+            <h4>Kitchener, ON | May 2024 — Present</h4>
+            <p>
+              Volunteering at Conestoga’s Centre for Entrepreneurship as a
+              marketing SME, guiding entrepreneurs on go-to-market strategies to
+              bring ideas to life.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- END LEFT COLUMN -->
 
-							<!-- Section -->
+      <!-- RIGHT COLUMN (SIDEBAR) -->
+      <aside class="right-column">
+        <h3>Connect with me</h3>
+        <!-- CONTACT INFO -->
+        <section>
+          <h4>Contact Information</h4>
+          <p><strong>Phone:</strong> 519.589.2548</p>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:urim.aliu@gmail.com">urim.aliu@gmail.com</a>
+          </p>
+          <p>
+            <strong>LinkedIn:</strong>
+            <a
+              href="https://www.linkedin.com/in/urim-aliu/"
+              target="_blank"
+              rel="noopener"
+            >
+              LinkedIn Profile
+            </a>
+          </p>
+        </section>
 
-							<!-- Leadership Philosophy Section -->
-							<section id="leadership-approach">
-								<header class="major">
-									<h2>Key Principles My Leadership Philosophy is Built On</h2>
-								</header>
-								<div class="features">
-										<article>
-												<span class="icon solid fa-lightbulb"></span>
-												<div class="content">
-														<h3>Vision-Driven Leadership</h3>
-														<p>I make sure every team member understands how their work connects to the bigger business goals. When people see the impact of what they’re doing, they take ownership and make smarter, more strategic decisions that drive real growth.</p>
-												</div>
-										</article>
-										<article>
-												<span class="icon solid fa-users"></span>
-												<div class="content">
-														<h3>Creating a Productive & Engaging Work Culture</h3>
-														<p>Teams perform at their best when they feel valued, challenged, and excited about what they’re working on. I create a culture where ideas flow freely, experimentation is encouraged, and failure is seen as a step toward success—not a setback.</p>
-												</div>
-										</article>
-										<article>
-												<span class="icon solid fa-chart-line"></span>
-												<div class="content">
-														<h3>Data-Informed Decision Making</h3>
-														<p>Great leadership isn’t just gut feeling—it’s about making informed decisions based on real insights. I set up clear metrics, analyze trends, and ensure that every move we make is backed by data while keeping the user experience at the core.</p>
-												</div>
-										</article>
-								</div>
-						</section>
-										
+        <!-- SKILLS AS BADGES -->
+        <section>
+          <h4>Skills</h4>
+          <ul class="skill-list">
+            <li class="badge">Marketing Leadership</li>
+            <li class="badge">Strategic Planning</li>
+            <li class="badge">Digital Marketing</li>
+            <li class="badge">Brand Management</li>
+            <li class="badge">Product Development</li>
+            <li class="badge">Data Analysis</li>
+            <li class="badge">Programming</li>
+            <li class="badge">Relationship Selling</li>
+          </ul>
+        </section>
 
-													
-							
-							<section>
-									<header class="major">
-										<h2>My Business Mindset</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon solid fa-heart"></span>
-											<div class="content">
-												<h3>Hungry</h3>
-												<p>I have a mind of a startup founder and I am always thinking about business growth, strategy, & problem-solving solutions. </p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-rocket"></span>
-											<div class="content">
-												<h3>Understanding Fundamentals</h3>
-												<p>I am very quick to develop a fundamental understanding of product & business strategy → business success vs product success</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-info"></span>
-											<div class="content">
-												<h3>Open-minded</h3>
-												<p>I am very open minded with a good attitude and always open to ideas & opinions of all people across the organization.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-paper-plane"></span>
-											<div class="content">
-												<h3>Agile</h3>
-												<p>I move fast and embrace failure as part of the process. More experiments → more better ideas → more ideal results faster.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-signal"></span>
-											<div class="content">
-												<h3>Data-driven</h3>
-												<p>I base business decision on good clean data. Getting good clean data however depends on how things are setup in the first place.</p>
-											</div>
-										</article>
-									</div>
-								</section>
+        <!-- TOOLS -->
+        <section>
+          <h4>Tools</h4>
+          <p>
+            Hubspot, GA4, GConsole, Looker Studio, SEMRush, Adobe Suite,
+            Wordpress, Webflow, OpenAI API, Notion, Jira, MS Office
+          </p>
+        </section>
 
-								<!-- <section>
-									<header class="major">
-										<h2>Tools</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon solid fa-code"></span>
-											<div class="content">
-												<h3>Front-end</h3>
-												<ul>
-													<li>HTML/CSS/Javascript</li>
-													<li>Bootstrap</li>
-													<li>React</li>
-												</ul>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-code" ></span>
-											<div class="content">
-												<h3>Back-end</h3>
-												<ul>
-													<li>Node.js</li>
-													<li>Express.js</li>
-													<li>MongoDB</li>
-												</ul>
-											</div>
-										</article>
+        <!-- EDUCATION -->
+        <section>
+          <h4>Education</h4>
+          <p>
+            Conestoga College (2012 - 2015) <br />
+            Major in Marketing
+          </p>
+        </section>
+      </aside>
+      <!-- END RIGHT COLUMN -->
+    </div>
+    <!-- END .container -->
 
-										<article>
-											<span class="icon solid fa-bullseye"></span>
-											<div class="content">
-												<h3>Automation & Marketing</h3>
-												<ul>
-													<li>Hubspot</li>
-													<li>Google Analytics</li>
-													<li>SEMRush</li>
-												</ul>
-											</div>
-										</article>
+    <footer>
+      <p>&copy; 2025 Urim Aliu</p>
+    </footer>
 
-										<article>
-											<span class="icon solid fa-comment"></span>
-											<div class="content">
-												<ul>
-													<h3>Wordpress</h3>
-													<li>Webflow</li>
-													<li>Shopify</li>
-												</ul>
-											</div>
-										</article>
-									</div>
-								</section> -->
+    <!-- JS: Search + Collapsible Logic -->
+    <script>
+      // SEARCH EXPERIENCE (Filters .job items in #experienceSection)
+      function searchExperience() {
+        const query = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const jobElements = document.querySelectorAll(
+          "#experienceSection .job"
+        );
 
-							<!-- Section -->
-								<!-- <section>
-									<header class="major">
-										<h2>Current work and projects</h2>
-									</header>
-									<div class="posts">
+        jobElements.forEach((job) => {
+          const text = job.innerText.toLowerCase();
+          if (text.includes(query) || query.trim() === "") {
+            job.style.display = "block";
+          } else {
+            job.style.display = "none";
+          }
+        });
+      }
 
-										<article>
-											<a href="https://communihub.io/" class="image"><img src="images/comm1.png" alt="" /></a>
-											<h3>Communihub - a tool to help nurture and grow communities</h3>
-											<p>It offers an internal social network for business accelerators, membership organizations, and non-profits to bring together community stakeholders in one integrated system to improve collaboration.</p>
-											<ul class="actions">
-												<li><a href="https://communihub.io/" class="button">Demo</a></li>
-					
-											</ul>
-											
-										</article>
+      // TOGGLE COLLAPSIBLE SECTIONS
+      function toggleCollapsible(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (!section) return;
 
-										<article>
-											<a href="https://yardsail.onrender.com/" class="image"><img src="images/cover.png" alt="" /></a>
-											<h3>yardSail - yard sale listing webapp</h3>
-											<p>This is a full-stack web application project that allows users to create and manage their own yard sale listings. The app provides a platform for users to share information about their upcoming yard sales with the community.</p>
-											<ul class="actions">
-												<li><a href="https://yardsail.onrender.com/" class="button">Demo</a></li>
-												<li><a href="https://github.com/ualiu/yard-sale-app.git" class="button">Github</a></li>
-											</ul>
-											
-										</article>
+        section.classList.toggle("open");
 
-										<article>
-											<a href="https://workorderapp.onrender.com/" class="image"><img src="images/cover-cmsapp.png" alt="" /></a>
-											<h3>wot. - work order tracker webapp</h3>
-											<p>I am currently building this fullstack web application to help local repair shop digitize their work orders so they can provide a modern customer experience to their clients.</p>
-											<ul class="actions">
-												<li><a href="https://workorderapp.onrender.com/" class="button">More</a></li>
-												<li><a href="https://github.com/ualiu/workorder-app.git" class="button">Github</a></li>
-											</ul>
-										</article>									
-								</section> -->
-								<!-- Skills & Tools Section -->
-<section id="skills-tools">
-	<header class="major">
-			<h2>Skills & Tools</h2>
-	</header>
-	<div class="row">
-			<div class="col-6 col-12-small">
-					<h3>Skills</h3>
-					<ul>
-							<li>Marketing Leadership</li>
-							<li>Strategic Planning</li>
-							<li>Digital Marketing</li>
-							<li>Brand Management</li>
-							<li>Product Development</li>
-							<li>Data Analysis</li>
-							<li>Programming</li>
-							<li>Relationship Selling</li>
-					</ul>
-			</div>
-			<div class="col-6 col-12-small">
-					<h3>Tools</h3>
-					<ul>
-							<li>Hubspot</li>
-							<li>GA4</li>
-							<li>GConsole</li>
-							<li>Looker Studio</li>
-							<li>SEMRush</li>
-							<li>Adobe Suite</li>
-							<li>Wordpress</li>
-							<li>Webflow</li>
-							<li>OpenAI API</li>
-							<li>Notion</li>
-					</ul>
-			</div>
-	</div>
-</section>
+        // Update the toggle symbol (+ or −)
+        const toggleIcon = document.getElementById(sectionId + "Toggle");
+        if (!toggleIcon) return;
 
-								<section>
-									<header class="major">
-										<h2>Books I have recently read:</h2>
-									</header>
-									<div class="posts">
-										<article>
-											<ul>
-												<li>
-													<h3>Napoleon The Great by Andrew Roberts</h3>
-												</li>
-												<li>
-													<h3>American Ceaser & Slow by William Manchestern</h3>
-												</li>
-												<li>
-													<h3>The Fourth Turning by William Strauss and Neil Howe</h3>
-												</li>
-												<li>
-													<h3>AI Super-Powers China, Silicon Valley, and the New World Order by Kai-Fu Lee</h3>
-												</li>
-												<li>
-													<h3>Zero to One by Peter Thiel</h3>
-												</li>
-												<li>
-													<h3>Sapiens by Yuval Noah Harari</h3>
-												</li>
-												<li>
-													<h3>Nexus by Yuval Noah Harari</h3>
-												</li>
-												<li>
-													<h3>Measure What Matters by John Doerr</h3>
-												</li>
-												<li>
-													<h3>How to Build a Car by Adrian Newey</h3>
-												</li>
-												<li>
-													<h3>Thinking Fast & Slow by Daniel Kahneman</h3>
-												</li>
-											</ul>
-										</article>
-									</div>
-								</section>
-
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-							<!-- Search -->
-								<!-- <section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section> -->
-
-							<!-- Menu -->
-								<nav id="menu">
-								
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Get in touch</h2>
-									</header>
-									
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">urim.aliu@gmail.com</a></li>
-										<li class="icon solid fa-phone">(519) 589-2548</li>
-										<li class="icon solid fa-map-marker"> Based in <br />Kitchener-Waterloo, Ontario</li>
-									</ul>
-								</section>
-
-							<!-- Footer -->
-								<footer id="footer">
-									<!-- <p class="copyright">&copy; 2022 - 2023 urimaliu.</p> -->
-								</footer>
-
-						</div>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+        toggleIcon.textContent = section.classList.contains("open") ? "–" : "+";
+      }
+    </script>
+  </body>
 </html>
