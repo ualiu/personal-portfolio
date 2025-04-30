@@ -21,22 +21,33 @@
     <div class="container">
       <!-- LEFT COLUMN -->
       <div class="left-column">
+        <!-- NAVIGATION CARD -->
+        <section class="nav-card">
+          <h2 class="section-title">Navigate my page</h2>
+          <ul class="nav-list">
+            <li><a href="/blog.html">Read my Blog</a></li>
+            <li><a href="#experienceSection">My Work</a></li>
+            <li><a href="#contactSection">Connect with Me</a></li>
+          </ul>
+        </section>
+        <!-- END NAVIGATION CARD -->
         <!-- HERO -->
         <section class="hero">
           <h1>Urim Aliu</h1>
           <p class="subtitle">
-            Marketing Leader, Problem Solver & Life Long Learner
+            Marketing Leader, Problem Solver & Life Long Learner. I find myself at home at technical and data heavy organizations.
           </p>
 
           <!-- Vidyard video -->
           <div class="video-container">
             <img
-              class="vidyard-player-embed"
-              src="https://play.vidyard.com/KDrojZ6gNzT8B7rndXoiAn.jpg"
-              data-uuid="KDrojZ6gNzT8B7rndXoiAn"
-              data-v="4"
-              data-type="inline"
-              style="width: 100%; display: block"
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/3nV4ziiCDzcJhH7MzShfXE.jpg"
+  data-uuid="3nV4ziiCDzcJhH7MzShfXE"
+  data-v="4"
+  data-type="inline"
+/>
             />
           </div>
           <script async src="https://play.vidyard.com/embed/v4.js"></script>
@@ -141,6 +152,18 @@
             <div class="project">
               <h3>
                 Founder at
+                <a href="https://godspec.ai">Godspec.ai</a>
+              </h3>
+              <p>
+                (Feb 2025 — Present)<br />
+                The SEO landscape is evolving quickly with the rise of AI-powered search tools. As more users turn to LLM-based platforms for everyday queries, it has become critical for marketers to track how these tools drive traffic compared to traditional search engines. To address this need, I developed Godspec.ai—a platform designed to help my marketing team at Alchemy understand and measure the impact of LLM search on our web performance.
+              </p>
+            </div>
+          <div class="collapsible-content">
+            <!-- Communihub -->
+            <div class="project">
+              <h3>
+                Founder at
                 <a href="https://communihub.io">Communihub</a>
               </h3>
               <p>
@@ -235,6 +258,7 @@
           </div>
           <div class="collapsible-content">
             <ul>
+              <li><h3>The 5 Dysfunctions of a Team by Partick Lencioni</h3></li>
               <li><h3>Napoleon The Great by Andrew Roberts</h3></li>
               <li><h3>American Caesar by William Manchester</h3></li>
               <li>
@@ -258,7 +282,9 @@
 
       <!-- RIGHT COLUMN (Contact & Skills) -->
       <aside class="right-column">
-        <h2 class="section-title" style="margin-top: 0">Connect with me</h2>
+        <h2 class="section-title" id="contactSection" style="margin-top: 0">
+          Connect with me
+        </h2>
         <!-- CONTACT INFO -->
         <section>
           <p><strong>Phone:</strong> 519.589.2548</p>
@@ -332,36 +358,6 @@
     </footer>
 
     <!-- JS: Search + Collapsible -->
-    <script>
-      /* SEARCH EXPERIENCE */
-      function searchExperience() {
-        const query = document
-          .getElementById("searchInput")
-          .value.toLowerCase();
-        const jobElements = document.querySelectorAll(
-          "#experienceSection .job"
-        );
-
-        jobElements.forEach((job) => {
-          const text = job.innerText.toLowerCase();
-          if (text.includes(query) || query.trim() === "") {
-            job.style.display = "block";
-          } else {
-            job.style.display = "none";
-          }
-        });
-      }
-
-      /* TOGGLE COLLAPSIBLE */
-      function toggleCollapsible(sectionId) {
-        const section = document.getElementById(sectionId);
-        if (!section) return;
-
-        section.classList.toggle("open");
-        const toggleIcon = document.getElementById(sectionId + "Toggle");
-        if (!toggleIcon) return;
-        toggleIcon.textContent = section.classList.contains("open") ? "–" : "+";
-      }
-    </script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
